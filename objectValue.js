@@ -67,12 +67,12 @@ function loadID(image){
 }
 
 
-btnForward.addEventListener('click', prevID);
-btnBack.addEventListener('click', nextID);
+btnForward.addEventListener('click', nextID);
+btnBack.addEventListener('click', prevID);
 
 // Previous id
 function prevID() {
-    ajaxIndex--;
+    ajaxIndex--;  console.log(ajaxIndex);
   
     if (ajaxIndex < 0) {
       ajaxIndex = userObject.length - 1;
@@ -83,7 +83,7 @@ function prevID() {
   
   // Next id
   function nextID() {
-    ajaxIndex++;
+    ajaxIndex++;  console.log(ajaxIndex);
   
     if (ajaxIndex > userObject.length - 1) {
       ajaxIndex = 0;
@@ -92,4 +92,4 @@ function prevID() {
     loadID(image[ajaxIndex]);
   }
 
-  console.log(ajaxIndex);
+  
